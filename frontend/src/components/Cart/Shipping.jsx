@@ -24,7 +24,7 @@ const Shipping = () => {
 
     const [address, setAddress] = useState(shippingInfo.address);
     const [city, setCity] = useState(shippingInfo.city);
-    const [country, setCountry] = useState('IN');
+    const [country] = useState('IN');
     const [state, setState] = useState(shippingInfo.state);
     const [pincode, setPincode] = useState(shippingInfo.pincode);
     const [phoneNo, setPhoneNo] = useState(shippingInfo.phoneNo);
@@ -105,7 +105,7 @@ const Shipping = () => {
                                     <div className="flex gap-6">
 
                                         <FormControl fullWidth>
-                                            <InputLabel id="country-select">Country</InputLabel>
+                                            <InputLabel id="country-select">País</InputLabel>
                                             <Select
                                                 labelId="country-select"
                                                 id="country-select"
@@ -119,7 +119,7 @@ const Shipping = () => {
                                         </FormControl>
 
                                         <FormControl fullWidth disabled={country ? false : true}>
-                                            <InputLabel id="state-select">State</InputLabel>
+                                            <InputLabel id="state-select">Estado</InputLabel>
                                             <Select
                                                 labelId="state-select"
                                                 id="state-select"
@@ -136,7 +136,7 @@ const Shipping = () => {
 
                                     </div>
 
-                                    <button type="submit" className="bg-primary-orange w-full sm:w-1/3 my-2 py-3.5 text-sm font-medium text-white shadow hover:shadow-lg rounded-sm uppercase outline-none">save and deliver here</button>
+                                    <button type="submit" className="bg-primary-orange w-full sm:w-1/3 my-2 py-3.5 text-sm font-medium text-white shadow hover:shadow-lg rounded-sm uppercase outline-none">salvar e entregar aqui</button>
                                 </form>
                             </div>
                         </Stepper>

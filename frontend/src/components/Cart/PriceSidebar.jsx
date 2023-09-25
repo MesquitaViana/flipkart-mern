@@ -5,18 +5,18 @@ const PriceSidebar = ({ cartItems }) => {
 
             {/* <!-- nav tiles --> */}
             <div className="flex flex-col bg-white rounded-sm shadow">
-                <h1 className="px-6 py-3 border-b font-medium text-gray-500">PRICE DETAILS</h1>
+                <h1 className="px-6 py-3 border-b font-medium text-gray-500">DETALHES DE PREÇO</h1>
 
                 <div className="flex flex-col gap-4 p-6 pb-3">
-                    <p className="flex justify-between">Price ({cartItems.length} item) <span>₹{cartItems.reduce((sum, item) => sum + (item.cuttedPrice * item.quantity), 0).toLocaleString()}</span></p>
-                    <p className="flex justify-between">Discount <span className="text-primary-green">- ₹{cartItems.reduce((sum, item) => sum + ((item.cuttedPrice * item.quantity) - (item.price * item.quantity)), 0).toLocaleString()}</span></p>
-                    <p className="flex justify-between">Delivery Charges <span className="text-primary-green">FREE</span></p>
+                    <p className="flex justify-between">Preço ({cartItems.length} item) <span>₹{cartItems.reduce((sum, item) => sum + (item.cuttedPrice * item.quantity), 0).toLocaleString()}</span></p>
+                    <p className="flex justify-between">Desconto <span className="text-primary-green">- ₹{cartItems.reduce((sum, item) => sum + ((item.cuttedPrice * item.quantity) - (item.price * item.quantity)), 0).toLocaleString()}</span></p>
+                    <p className="flex justify-between">Taxas de entrega <span className="text-primary-green">Gratis</span></p>
 
                     <div className="border border-dashed"></div>
-                    <p className="flex justify-between text-lg font-medium">Total Amount <span>₹{cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0).toLocaleString()}</span></p>
+                    <p className="flex justify-between text-lg font-medium">Montante total <span>₹{cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0).toLocaleString()}</span></p>
                     <div className="border border-dashed"></div>
 
-                    <p className="font-medium text-primary-green">You will save ₹{cartItems.reduce((sum, item) => sum + ((item.cuttedPrice * item.quantity) - (item.price * item.quantity)), 0).toLocaleString()} on this order</p>
+                    <p className="font-medium text-primary-green">Você vai economizar ₹{cartItems.reduce((sum, item) => sum + ((item.cuttedPrice * item.quantity) - (item.price * item.quantity)), 0).toLocaleString()} Neste pedido</p>
 
                 </div>
 

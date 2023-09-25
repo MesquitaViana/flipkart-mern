@@ -22,37 +22,37 @@ const navMenu = [
     },
     {
         icon: <ShoppingBagIcon />,
-        label: "Orders",
-        ref: "/admin/orders",
+        label: "Pedidos",
+        ref: "/admin/pedidos",
     },
     {
         icon: <InventoryIcon />,
-        label: "Products",
-        ref: "/admin/products",
+        label: "Produtos",
+        ref: "/admin/produtos",
     },
     {
         icon: <AddBoxIcon />,
-        label: "Add Product",
+        label: "Adicionar produto",
         ref: "/admin/new_product",
     },
     {
         icon: <GroupIcon />,
-        label: "Users",
+        label: "Usuario",
         ref: "/admin/users",
     },
     {
         icon: <ReviewsIcon />,
-        label: "Reviews",
+        label: "Avaliações",
         ref: "/admin/reviews",
     },
     {
         icon: <AccountBoxIcon />,
-        label: "My Profile",
+        label: "Meu perfil",
         ref: "/account",
     },
     {
         icon: <LogoutIcon />,
-        label: "Logout",
+        label: "Sair",
     },
 ];
 

@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: [true, "Please enter product name"],
+        required: [true, "Por favor entre com o nome do produto"],
         trim: true
     },
     description: {
         type: String,
-        required: [true, "Please enter product description"]
+        required: [true, "Por favor entre com a descrição do produto"]
     },
     highlights: [
         {
@@ -30,11 +30,11 @@ const productSchema = new mongoose.Schema({
     ],
     price: {
         type: Number,
-        required: [true, "Please enter product price"]
+        required: [true, "Por favor, insira o preço do produto"]
     },
     cuttedPrice: {
         type: Number,
-        required: [true, "Please enter cutted price"]
+        required: [true, "Por favor, insira o preço reduzido"]
     },
     images: [
         {
@@ -66,12 +66,12 @@ const productSchema = new mongoose.Schema({
     },
     category: {
         type: String,
-        required: [true, "Please enter product category"]
+        required: [true, "Por favor, insira a categoria do produto"]
     },
     stock: {
         type: Number,
-        required: [true, "Please enter product stock"],
-        maxlength: [4, "Stock cannot exceed limit"],
+        required: [true, "Por favor, insira o estoque do produto"],
+        maxlength: [4, "Estoque não pode exceder o limite"],
         default: 1
     },
     warranty: {
@@ -90,7 +90,7 @@ const productSchema = new mongoose.Schema({
         {
             user: {
                 type: mongoose.Schema.ObjectId,
-                ref: "User",
+                ref: "Usuario",
                 required: true
             },
             name: {
@@ -110,7 +110,7 @@ const productSchema = new mongoose.Schema({
 
     user: {
         type: mongoose.Schema.ObjectId,
-        ref: "User",
+        ref: "Usuario",
         required: true
     },
     createdAt: {
@@ -119,4 +119,4 @@ const productSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Product', productSchema);
+module.exports = mongoose.model('Produto', productSchema);

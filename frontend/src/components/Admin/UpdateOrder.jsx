@@ -54,12 +54,12 @@ const UpdateOrder = () => {
                 <>
                     {order && order.user && order.shippingInfo && (
                         <div className="flex flex-col gap-4">
-                            <Link to="/admin/orders" className="ml-1 flex items-center gap-0 font-medium text-primary-blue uppercase"><ArrowBackIosIcon sx={{ fontSize: "18px" }} />Go Back</Link>
+                            <Link to="/admin/orders" className="ml-1 flex items-center gap-0 font-medium text-primary-blue uppercase"><ArrowBackIosIcon sx={{ fontSize: "18px" }} />Voltar</Link>
 
                             <div className="flex flex-col sm:flex-row bg-white shadow-lg rounded-lg min-w-full">
                                 <div className="sm:w-1/2 border-r">
                                     <div className="flex flex-col gap-3 my-8 mx-10">
-                                        <h3 className="font-medium text-lg">Delivery Address</h3>
+                                        <h3 className="font-medium text-lg">Endereço de entrega</h3>
                                         <h4 className="font-medium">{order.user.name}</h4>
                                         <p className="text-sm">{`${order.shippingInfo.address}, ${order.shippingInfo.city}, ${order.shippingInfo.state} - ${order.shippingInfo.pincode}`}</p>
                                         <div className="flex gap-2 text-sm">
@@ -67,16 +67,16 @@ const UpdateOrder = () => {
                                             <p>{order.user.email}</p>
                                         </div>
                                         <div className="flex gap-2 text-sm">
-                                            <p className="font-medium">Phone Number</p>
+                                            <p className="font-medium">Número de telefone</p>
                                             <p>{order.shippingInfo.phoneNo}</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <form onSubmit={updateOrderSubmitHandler} className="flex flex-col gap-3 p-8">
-                                    <h3 className="font-medium text-lg">Update Status</h3>
+                                    <h3 className="font-medium text-lg">Atualizar o status</h3>
                                     <div className="flex gap-2">
-                                        <p className="text-sm font-medium">Current Status:</p>
+                                        <p className="text-sm font-medium">Status atual:</p>
                                         <p className="text-sm">
                                             {order.orderStatus === "Shipped" && (`Shipped on ${formatDate(order.shippedAt)}`)}
                                             {order.orderStatus === "Processing" && (`Ordered on ${formatDate(order.createdAt)}`)}
@@ -116,14 +116,14 @@ const UpdateOrder = () => {
                                             </div>
                                             <div className="flex flex-col gap-1 overflow-hidden">
                                                 <p className="text-sm">{name.length > 45 ? `${name.substring(0, 45)}...` : name}</p>
-                                                <p className="text-xs text-gray-600 mt-2">Quantity: {quantity}</p>
-                                                <p className="text-xs text-gray-600">Price: ₹{price.toLocaleString()}</p>
+                                                <p className="text-xs text-gray-600 mt-2">quantidade: {quantity}</p>
+                                                <p className="text-xs text-gray-600">preço: ₹{price.toLocaleString()}</p>
                                                 <span className="font-medium">Total: ₹{(quantity * price).toLocaleString()}</span>
                                             </div>
                                         </div>
 
                                         <div className="flex flex-col w-full sm:w-1/2">
-                                            <h3 className="font-medium sm:text-center">Order Status</h3>
+                                            <h3 className="font-medium sm:text-center">Status do pedido</h3>
                                             <TrackStepper
                                                 orderOn={order.createdAt}
                                                 shippedAt={order.shippedAt}

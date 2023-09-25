@@ -279,7 +279,7 @@ const NewProduct = () => {
                         </div>
                     </div>
 
-                    <h2 className="font-medium">Brand Details</h2>
+                    <h2 className="font-medium">Detalhes da marca</h2>
                     <div className="flex justify-between gap-4 items-start">
                         <TextField
                             label="Brand"
@@ -303,14 +303,14 @@ const NewProduct = () => {
                                 onChange={handleLogoChange}
                                 className="hidden"
                             />
-                            Choose Logo
+                            Escolha o logotipo
                         </label>
                     </div>
 
                 </div>
 
                 <div className="flex flex-col gap-2 m-2 sm:w-1/2">
-                    <h2 className="font-medium">Specifications</h2>
+                    <h2 className="font-medium">Especificações</h2>
 
                     <div className="flex justify-evenly gap-2 items-center">
                         <TextField value={specsInput.title} onChange={handleSpecsChange} name="title" label="Name" placeholder="Model No" variant="outlined" size="small" />
@@ -330,7 +330,7 @@ const NewProduct = () => {
                         ))}
                     </div>
 
-                    <h2 className="font-medium">Product Images</h2>
+                    <h2 className="font-medium">Imagens do produto</h2>
                     <div className="flex gap-2 overflow-x-auto h-32 border rounded">
                         {imagesPreview.map((image, i) => (
                             <img draggable="false" src={image} alt="Product" key={i} className="w-full h-full object-contain" />
@@ -345,7 +345,7 @@ const NewProduct = () => {
                             onChange={handleProductImageChange}
                             className="hidden"
                         />
-                        Choose Files
+                        Escolher os arquivos
                     </label>
 
                     <div className="flex justify-end">

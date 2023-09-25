@@ -47,14 +47,14 @@ const orderSchema = new mongoose.Schema({
             },
             product: {
                 type: mongoose.Schema.ObjectId,
-                ref: "Product",
+                ref: "Produto",
                 required: true
             },
         },
     ],
     user: {
         type: mongoose.Schema.ObjectId,
-        ref: "User",
+        ref: "Usuario",
         required: true
     },
     paymentInfo: {
@@ -79,7 +79,7 @@ const orderSchema = new mongoose.Schema({
     orderStatus: {
         type: String,
         required: true,
-        default: "Processing",
+        default: "Processando",
     },
     deliveredAt: Date,
     shippedAt: Date,

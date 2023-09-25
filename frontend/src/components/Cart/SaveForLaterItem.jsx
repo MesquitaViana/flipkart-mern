@@ -36,7 +36,7 @@ const SaveForLaterItem = ({ product, name, seller, price, cuttedPrice, image, st
                     <div className="flex justify-between items-start pr-5">
                         <div className="flex flex-col gap-0.5 w-11/12 sm:w-full">
                             <p>{name.length > 50 ? `${name.substring(0, 50)}...` : name}</p>
-                            <span className="text-sm text-gray-500">Seller: {seller}</span>
+                            <span className="text-sm text-gray-500">Vendedor: {seller}</span>
                         </div>
                     </div>
                     {/* <!-- product title --> */}
@@ -62,8 +62,8 @@ const SaveForLaterItem = ({ product, name, seller, price, cuttedPrice, image, st
                     <span className="w-7 h-7 text-xl font-light bg-gray-50 rounded-full border flex items-center justify-center cursor-not-allowed">+</span>
                 </div>
                 {/* <!-- quantity --> */}
-                <button onClick={() => moveToCartHandler(product, quantity)} className="sm:ml-4 font-medium hover:text-primary-blue">MOVE TO CART</button>
-                <button onClick={() => removeFromSaveForLaterHandler(product)} className="font-medium hover:text-red-600">REMOVE</button>
+                <button onClick={() => moveToCartHandler(product, quantity)} className="sm:ml-4 font-medium hover:text-primary-blue">MOVER PARA O CARRINHO</button>
+                <button onClick={() => removeFromSaveForLaterHandler(product)} className="font-medium hover:text-red-600">REMOVER</button>
             </div>
             {/* <!-- move to cart --> */}
 

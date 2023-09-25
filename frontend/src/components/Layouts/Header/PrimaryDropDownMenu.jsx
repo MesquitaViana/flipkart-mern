@@ -79,13 +79,13 @@ const PrimaryDropDownMenu = ({ setTogglePrimaryDropDown, user }) => {
             {user.role === "admin" &&
                 <Link className="pl-3 py-3.5 border-b flex gap-3 items-center hover:bg-gray-50 rounded-t" to="/admin/dashboard">
                     <span className="text-primary-blue"><DashboardIcon sx={{ fontSize: "18px" }} /></span>
-                    Admin Dashboard
+                    Painel Administrativo
                 </Link>
             }
 
             <Link className="pl-3 py-3.5 border-b flex gap-3 items-center hover:bg-gray-50 rounded-t" to="/account">
                 <span className="text-primary-blue"><AccountCircleIcon sx={{ fontSize: "18px" }} /></span>
-                My Profile
+                Meu perfil
             </Link>
 
             {navs.map((item, i) => {
@@ -113,7 +113,8 @@ const PrimaryDropDownMenu = ({ setTogglePrimaryDropDown, user }) => {
 
             <div className="pl-3 py-3.5 flex gap-3 items-center hover:bg-gray-50 rounded-b cursor-pointer" onClick={handleLogout} >
                 <span className="text-primary-blue"><PowerSettingsNewIcon sx={{ fontSize: "18px" }} /></span>
-                Logout
+               
+Sair
             </div>
 
             <div className="absolute right-1/2 -top-2.5">

@@ -52,12 +52,12 @@ const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, qua
                     <div className="flex flex-col sm:flex-row justify-between items-start pr-5 gap-1 sm:gap-0">
                         <div className="flex flex-col gap-0.5 sm:w-3/5">
                             <p className="group-hover:text-primary-blue">{name.length > 42 ? `${name.substring(0, 42)}...` : name}</p>
-                            <span className="text-sm text-gray-500">Seller: {seller}</span>
+                            <span className="text-sm text-gray-500">Vendedor: {seller}</span>
                         </div>
 
                         <div className="flex flex-col sm:gap-2">
-                            <p className="text-sm">Delivery by {getDeliveryDate()} | <span className="text-primary-green">Free</span> <span className="line-through">₹{quantity * 40}</span></p>
-                            <span className="text-xs text-gray-500">7 Days Replacement Policy</span>
+                            <p className="text-sm">Entregue por {getDeliveryDate()} | <span className="text-primary-green">Gratis</span> <span className="line-through">₹{quantity * 40}</span></p>
+                            <span className="text-xs text-gray-500">Política de substituição de 7 dias</span>
                         </div>
 
                     </div>
@@ -86,8 +86,8 @@ const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, qua
                 {/* <!-- quantity --> */}
                 {inCart && (
                     <>
-                    <button onClick={() => saveForLaterHandler(product)} className="sm:ml-4 font-medium hover:text-primary-blue">SAVE FOR LATER</button>
-                    <button onClick={() => removeCartItem(product)} className="font-medium hover:text-red-600">REMOVE</button>
+                    <button onClick={() => saveForLaterHandler(product)} className="sm:ml-4 font-medium hover:text-primary-blue">GUARDAR PARA DEPOIS</button>
+                    <button onClick={() => removeCartItem(product)} className="font-medium hover:text-red-600">REMOVER</button>
                     </>
                 )}
             </div>

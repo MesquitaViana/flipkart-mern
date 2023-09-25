@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import Chart from 'chart.js/auto'
 import { Doughnut, Line, Pie, Bar } from 'react-chartjs-2';
 import { getAdminProducts } from '../../actions/productAction';
 import { useSelector, useDispatch } from 'react-redux';
@@ -101,19 +100,19 @@ const MainData = () => {
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-6">
                 <div className="flex flex-col bg-purple-600 text-white gap-2 rounded-xl shadow-lg hover:shadow-xl p-6">
-                    <h4 className="text-gray-100 font-medium">Total Sales Amount</h4>
+                    <h4 className="text-gray-100 font-medium">Valor total de vendas</h4>
                     <h2 className="text-2xl font-bold">₹{totalAmount?.toLocaleString()}</h2>
                 </div>
                 <div className="flex flex-col bg-red-500 text-white gap-2 rounded-xl shadow-lg hover:shadow-xl p-6">
-                    <h4 className="text-gray-100 font-medium">Total Orders</h4>
+                    <h4 className="text-gray-100 font-medium">Total de vendas</h4>
                     <h2 className="text-2xl font-bold">{orders?.length}</h2>
                 </div>
                 <div className="flex flex-col bg-yellow-500 text-white gap-2 rounded-xl shadow-lg hover:shadow-xl p-6">
-                    <h4 className="text-gray-100 font-medium">Total Products</h4>
+                    <h4 className="text-gray-100 font-medium">Total de produtos</h4>
                     <h2 className="text-2xl font-bold">{products?.length}</h2>
                 </div>
                 <div className="flex flex-col bg-green-500 text-white gap-2 rounded-xl shadow-lg hover:shadow-xl p-6">
-                    <h4 className="text-gray-100 font-medium">Total Users</h4>
+                    <h4 className="text-gray-100 font-medium">Total de usuarios</h4>
                     <h2 className="text-2xl font-bold">{users?.length}</h2>
                 </div>
             </div>
@@ -124,7 +123,7 @@ const MainData = () => {
                 </div>
 
                 <div className="bg-white rounded-xl shadow-lg p-4 text-center">
-                    <span className="font-medium uppercase text-gray-800">Order Status</span>
+                    <span className="font-medium uppercase text-gray-800">Status do pedido</span>
                     <Pie data={pieState} />
                 </div>
             </div>
@@ -135,7 +134,7 @@ const MainData = () => {
                 </div>
 
                 <div className="bg-white rounded-xl shadow-lg p-4 text-center">
-                    <span className="font-medium uppercase text-gray-800">Stock Status</span>
+                    <span className="font-medium uppercase text-gray-800">Status do estoque</span>
                     <Doughnut data={doughnutState} />
                 </div>
             </div>

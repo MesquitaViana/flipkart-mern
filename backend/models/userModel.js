@@ -7,21 +7,21 @@ const crypto = require('crypto');
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: [true, "Please Enter Your Name"],
+        required: [true, "Por favor, insira seu nome"],
     },
     email: {
         type: String,
-        required: [true, "Please Enter Your Email"],
+        required: [true, "Por favor, insira seu email"],
         unique: true,
     },
     gender: {
         type: String,
-        required: [true, "Please Enter Gender"]
+        required: [true, "Por favor, insira o gênero"]
     },
     password: {
         type: String,
-        required: [true, "Please Enter Your Password"],
-        minLength: [8, "Password should have atleast 8 chars"],
+        required: [true, "Por favor, insira sua senha"],
+        minLength: [8, "A senha devera ter 8 ou mais caracteres"],
         select: false,
     },
     avatar: {
@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema({
     },
     role: {
         type: String,
-        default: "user",
+        default: "Usuario",
     },
     createdAt: {
         type: Date,
@@ -44,9 +44,9 @@ const userSchema = new mongoose.Schema({
     resetPasswordExpire: Date,
 });
 
-userSchema.pre("save", async function (next) {
+userSchema.pre("salvar", async function (next) {
 
-    if (!this.isModified("password")) {
+    if (!this.isModified("Senha")) {
         next();
     }
 
@@ -75,4 +75,4 @@ userSchema.methods.getResetPasswordToken = async function () {
     return resetToken;
 }
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Usuario', userSchema);

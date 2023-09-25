@@ -1,109 +1,50 @@
 import { useEffect, useState } from 'react';
-import WorkIcon from '@mui/icons-material/Work';
-import StarsIcon from '@mui/icons-material/Stars';
-import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
-import HelpIcon from '@mui/icons-material/Help';
+//import WorkIcon from '@mui/icons-material/Work';
+//import StarsIcon from '@mui/icons-material/Stars';
+//import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+//import HelpIcon from '@mui/icons-material/Help';
 import paymentMethods from '../../../assets/images/payment-methods.svg';
 import { useLocation } from 'react-router-dom';
+import { politicasPrivacidade } from './Politica';
 
 const footerLinks = [
   {
-    title: "about",
+    title: "Ajuda",
     links: [
       {
-        name: "Contact Us",
-        redirect: "https://www.flipkart.com/helpcentre",
+        name: "Pagamentos",
+        redirect: "https://www.flipkart.com/pages/payments",
       },
       {
-        name: "About Us",
-        redirect: "https://www.flipkart.com/about-us",
+        name: "Envio",
+        redirect: "",
       },
       {
-        name: "Careers",
-        redirect: "https://www.flipkartcareers.com",
-      },
-      {
-        name: "Flipkart Stories",
-        redirect: "https://stories.flipkart.com",
-      },
-      {
-        name: "Press",
-        redirect: "https://stories.flipkart.com/category/top-stories/news",
-      },
-      {
-        name: "Flipkart Wholesale",
-        redirect: "https://www.flipkartwholesale.com",
-      },
-      {
-        name: "Corporate Information",
-        redirect: "https://www.flipkart.com/corporate-information",
+        name: "Cancelamento e devolução",
+        redirect: "",
       },
     ]
   },
   {
-    title: "help",
+    title: "Politica de privacidade",
     links: [
       {
-        name: "Payments",
-        redirect: "https://www.flipkart.com/pages/payments",
-      },
-      {
-        name: "Shipping",
-        redirect: "https://www.flipkart.com/pages/shipping",
-      },
-      {
-        name: "Cancellation & Returns",
-        redirect: "https://www.flipkart.com/helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG",
-      },
-      {
-        name: "FAQ",
-        redirect: "https://www.flipkart.com/helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG",
+        name:"Politica de privacidade",
+        redirect: "'./Politica'",
+        
       }
     ]
   },
   {
-    title: "policy",
+    title: "Redes sociais",
     links: [
       {
-        name: "Return Policy",
-        redirect: "https://www.flipkart.com/pages/returnpolicy",
+        name: "Instagram",
+        redirect: "https://instagram.com/belgashookah__?igshid=MzRlODBiNWFlZA==",
       },
       {
-        name: "Terms Of Use",
-        redirect: "https://www.flipkart.com/pages/terms",
-      },
-      {
-        name: "Security",
-        redirect: "https://www.flipkart.com/pages/paymentsecurity",
-      },
-      {
-        name: "Privacy",
-        redirect: "https://www.flipkart.com/pages/privacypolicy",
-      },
-      {
-        name: "Sitemap",
-        redirect: "https://www.flipkart.com/sitemap",
-      },
-      {
-        name: "EPR Compliance",
-        redirect: "https://www.flipkart.com/pages/ewaste-compliance-tnc",
-      },
-    ]
-  },
-  {
-    title: "social",
-    links: [
-      {
-        name: "Facebook",
-        redirect: "https://www.facebook.com/flipkart",
-      },
-      {
-        name: "Twitter",
-        redirect: "https://twitter.com/flipkart",
-      },
-      {
-        name: "YouTube",
-        redirect: "https://www.youtube.com/flipkart",
+        name: "TikTok",
+        redirect: "https://www.tiktok.com/@belgashookah__",
       }
     ]
   }
@@ -140,26 +81,19 @@ const Footer = () => {
             <div className="border-gray-600 h-36 w-1 border-l mr-5 mt-6 hidden sm:block"></div>
             <div className="w-full sm:w-5/12 my-6 mx-5 sm:mx-0 flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between">
               <div className="w-full sm:w-1/2">
-                <h2 className="text-primary-grey">Mail Us:</h2>
-                <p className="mt-2 leading-5">Flipkart Internet Private Limited,<br />
-                  Buildings Alyssa, Begonia &<br />
-                  Clove Embassy Tech Village,<br />
-                  Outer Ring Road, Devarabeesanahalli Village,<br />
-                  Bengaluru, 560103,<br />
-                  Karnataka, India
+                <h2 className="text-primary-grey">Envie-nos um e-mail:</h2>
+                <p className="mt-2 leading-5">BelgasHooka<br />
+                belgashookah1@gmail.com<br />
+                  
                 </p>
               </div>
 
               <div className="w-full sm:w-1/2">
-                <h2 className="text-primary-grey">Registered Office Address:</h2>
-                <p className="mt-2 leading-5">Flipkart Internet Private Limited,<br />
-                  Buildings Alyssa, Begonia &<br />
-                  Clove Embassy Tech Village,<br />
-                  Outer Ring Road, Devarabeesanahalli Village,<br />
-                  Bengaluru, 560103,<br />
-                  Karnataka, India <br />
-                  CIN : U51109KA2012PTC066107<br />
-                  Telephone: <a className="text-primary-blue" href="tel:18002029898">1800 202 9898</a>
+                <h2 className="text-primary-grey">Endereço:</h2>
+                <p className="mt-2 leading-5">BelgasHooka,<br />
+                  Avenida Sylvio Torres,295<br />
+                  São Paulo - SP, 03589-010<br />
+                  Telefone: <a className="text-primary-blue" href="tel:11917676389">11 91767-6389</a>
                 </p>
               </div>
             </div>
@@ -167,24 +101,11 @@ const Footer = () => {
           </footer>
           {/* <!-- footer ends --> */}
 
-          <div className="px-16 py-6 w-full bg-primary-darkBlue hidden sm:flex justify-between items-center text-sm text-white">
-            <a href="https://seller.flipkart.com/sell-online" target="_blank" rel="noreferrer" className="flex items-center gap-2">
-              <span className="text-yellow-400"><WorkIcon sx={{ fontSize: "20px" }} /></span> Sell On Flipkart
-            </a>
-            <a href="https://brands.flipkart.com" target="_blank" rel="noreferrer" className="flex items-center gap-2">
-              <span className="text-yellow-400"><StarsIcon sx={{ fontSize: "20px" }} /></span> Advertise
-            </a>
-            <a href="https://www.flipkart.com/the-gift-card-store" rel="noreferrer" target="_blank" className="flex items-center gap-2">
-              <span className="text-yellow-400"><CardGiftcardIcon sx={{ fontSize: "20px" }} /></span> Gift Cards
-            </a>
-            <a href="https://www.flipkart.com/helpcentre" target="_blank" rel="noreferrer" className="flex items-center gap-2">
-              <span className="text-yellow-400"><HelpIcon sx={{ fontSize: "20px" }} /></span> Help Center
-            </a>
-
-            <span>&copy; 2007-{new Date().getFullYear()} Flipkart.com</span>
-            <img draggable="false" src={paymentMethods} alt="Card Payment" />
-          </div>
-        </>
+         
+             <img draggable="false" src={paymentMethods} alt="Card Payment" />
+         
+        
+        </>       
       )}
     </>
   )

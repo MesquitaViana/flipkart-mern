@@ -79,7 +79,7 @@ const UpdateUser = () => {
             {loading ? <Loading /> : (
                 <>
                     <div className="flex flex-col bg-white shadow-lg rounded-lg mx-auto w-lg max-w-xl">
-                        <h2 className="text-center text-2xl font-medium mt-6 text-gray-800">Update Profile</h2>
+                        <h2 className="text-center text-2xl font-medium mt-6 text-gray-800">Atualizar perfil</h2>
 
                         <form
                             onSubmit={updateUserSubmitHandler}
@@ -111,7 +111,7 @@ const UpdateUser = () => {
 
                                 {/* <!-- gender input --> */}
                                 <div className="flex gap-4 items-center">
-                                    <h2 className="text-md">Your Gender :</h2>
+                                    <h2 className="text-md">Seu gênero :</h2>
                                     <div className="flex items-center gap-6" id="radioInput">
                                         <RadioGroup
                                             row
@@ -140,13 +140,13 @@ const UpdateUser = () => {
                                         value={role}
                                         onChange={(e) => setRole(e.target.value)}
                                     >
-                                        <MenuItem value={"user"}>User</MenuItem>
-                                        <MenuItem value={"admin"}>Admin</MenuItem>
+                                        <MenuItem value={"user"}>Usuario</MenuItem>
+                                        <MenuItem value={"admin"}>Adiministrador</MenuItem>
                                     </TextField>
                                 </div>
                                 
-                                <button type="submit" className="text-white py-3 w-full bg-primary-orange shadow hover:shadow-lg rounded-sm font-medium">Update</button>
-                                <Link className="hover:bg-gray-100 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium" to="/admin/users">Cancel</Link>
+                                <button type="submit" className="text-white py-3 w-full bg-primary-orange shadow hover:shadow-lg rounded-sm font-medium">Atualização</button>
+                                <Link className="hover:bg-gray-100 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium" to="/admin/users">Cancelar</Link>
                             </div>
 
                         </form>
